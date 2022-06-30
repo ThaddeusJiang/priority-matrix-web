@@ -1,13 +1,17 @@
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import StarterPage from "./pages/StarterPage/StarterPage";
+import BugsPriority from "./pages/BugsPriority/BugsPriority";
+import FeaturesPriority from "./pages/FeaturesPriority/FeaturesPriority";
+
+import "./main.css";
 
 export default function Root(props) {
   return (
     <BrowserRouter>
-      <Route path="/starter" component={StarterPage} />
-      <Route path="*">
-        <p>TODO: 404, not found</p>
-      </Route>
+      <Switch>
+        <Route exact path="/" component={BugsPriority} />
+        <Route path="/bugs" component={BugsPriority} />
+        <Route path="/features" component={FeaturesPriority} />
+      </Switch>
     </BrowserRouter>
   );
 }

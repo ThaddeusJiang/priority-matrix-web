@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "declarationDir": "dist"
   },
-  "files": ["src/thaddeusjiang-single-spa-application-starter.tsx"],
+  "files": ["src/priority-matrix-web.tsx"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"],
   "skipLibCheck": true
