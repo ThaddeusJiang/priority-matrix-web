@@ -133,7 +133,7 @@ const BugsPriority = () => {
         <div className="form-control mx-auto">
           <div className="flex justify-center space-x-8">
             <div>
-              <label htmlFor="emergency" className="label inline">
+              <label htmlFor="emergency" className="label">
                 emergency
               </label>
               <select
@@ -150,7 +150,7 @@ const BugsPriority = () => {
             </div>
 
             <div>
-              <label htmlFor="scope" className="label inline">
+              <label htmlFor="scope" className="label">
                 scope
               </label>
               <select

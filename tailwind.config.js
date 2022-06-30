@@ -5,9 +5,6 @@ module.exports = {
       pattern: /./,
     },
   ],
-  theme: {
-    extend: {},
-  },
   plugins: [require("daisyui")],
   daisyui: {
     // TODO: keep same as your styleguide

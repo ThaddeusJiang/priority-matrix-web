@@ -12,13 +12,13 @@ const FeaturesPriority = () => {
 
         <div className=" mx-auto">
           {/* FIXME: fix width */}
-          <div className=" max-w-screen-md grid grid-cols-4 ">
+          <div className=" w-96 grid grid-cols-4 ">
             <div className="flex items-center">
               <div>
                 <p>
                   <strong>High</strong> Emergency
                 </p>
-                <p>
+                <p className="hidden sm:block">
                   Features will affect the company's earnings. The clients will
                   terminate the contract.
                 </p>
@@ -47,7 +47,9 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>Medium</strong> Emergency
                 </p>
-                <p>Features may affect future plans.</p>
+                <p className="hidden sm:block">
+                  Features may affect future plans.
+                </p>
               </div>
             </div>
             <div
@@ -79,7 +81,7 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>Low</strong> Emergency
                 </p>
-                <p>
+                <p className="hidden sm:block">
                   Features are no impact on the company's short-term and
                   long-term earnings.
                 </p>
@@ -107,9 +109,9 @@ const FeaturesPriority = () => {
             <div>
               <div>
                 <p>
-                  <strong>Low</strong>
+                  <strong>Low</strong> Important
                 </p>
-                <p>
+                <p className="hidden sm:block">
                   Maybe some clients will be happy, but it is okay if they
                   aren't.
                 </p>
@@ -118,17 +120,21 @@ const FeaturesPriority = () => {
             <div>
               <div>
                 <p>
-                  <strong>Medium</strong>
+                  <strong>Medium</strong> Important
                 </p>
-                <p>Standard functionality in the industry.</p>
+                <p className="hidden sm:block">
+                  Standard functionality in the industry.
+                </p>
               </div>
             </div>
             <div>
               <div>
                 <p>
-                  <strong>High</strong>
+                  <strong>High</strong> Important
                 </p>
-                <p>Provide users with more than 10 times the benefits.</p>
+                <p className="hidden sm:block">
+                  Provide users with more than 10 times the benefits.
+                </p>
               </div>
             </div>
           </div>
@@ -137,7 +143,7 @@ const FeaturesPriority = () => {
         <div className="form-control mx-auto">
           <div className="flex justify-center space-x-8">
             <div>
-              <label htmlFor="emergency" className="label inline">
+              <label htmlFor="emergency" className="label">
                 emergency
               </label>
               <select
@@ -154,7 +160,7 @@ const FeaturesPriority = () => {
             </div>
 
             <div>
-              <label htmlFor="scope" className="label inline">
+              <label htmlFor="scope" className="label">
                 important
               </label>
               <select
