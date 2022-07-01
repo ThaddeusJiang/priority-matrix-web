@@ -8,7 +8,7 @@ export default function Root(props) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={BugsPriority} />
+        <Route exact path="/" component={FeaturesPriority} />
         <Route path="/bugs" component={BugsPriority} />
         <Route path="/features" component={FeaturesPriority} />
       </Switch>

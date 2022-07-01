@@ -10,35 +10,36 @@ const FeaturesPriority = () => {
       <section className="flex flex-col justify-center space-y-4 mt-4">
         <h1 className="mx-auto text-2xl">Features Priority</h1>
 
-        <div className=" mx-auto">
+        <div className=" mx-auto ">
           {/* FIXME: fix width */}
-          <div className=" w-96 grid grid-cols-4 ">
-            <div className="flex items-center">
+          {/* <div className="sm:w-[768px] max-w-screen-md grid grid-cols-4 border border-white divide-x divide-white divide-y"> */}
+          <div className="sm:w-[768px] max-w-screen-md grid grid-cols-4 border border-white">
+            <div className="priority-card flex items-center">
               <div>
                 <p>
                   <strong>High</strong> Emergency
                 </p>
-                <p className="hidden sm:block">
+                <p>
                   Features will affect the company's earnings. The clients will
                   terminate the contract.
                 </p>
               </div>
             </div>
             <div
-              className={classNames("priority-card bg-indigo-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+              className={classNames("priority-card bg-gray-100", {
+                "animate-pulse border-2 border-orange-500":
                   x === "low" && y === "high",
               })}
             ></div>
             <div
-              className={classNames("priority-card bg-indigo-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+              className={classNames("priority-card bg-rose-100", {
+                "animate-pulse border-2 border-orange-500":
                   x === "medium" && y === "high",
               })}
             ></div>
             <div
               className={classNames("priority-card bg-rose-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+                "animate-pulse border-2 border-orange-500":
                   x === "high" && y === "high",
               })}
             ></div>
@@ -47,14 +48,12 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>Medium</strong> Emergency
                 </p>
-                <p className="hidden sm:block">
-                  Features may affect future plans.
-                </p>
+                <p>Features may affect future plans.</p>
               </div>
             </div>
             <div
-              className={classNames("priority-card bg-green-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+              className={classNames("priority-card bg-gray-100", {
+                "animate-pulse border-2 border-orange-500":
                   x === "low" && y === "medium",
               })}
             >
@@ -62,7 +61,7 @@ const FeaturesPriority = () => {
             </div>
             <div
               className={classNames("priority-card bg-indigo-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+                "animate-pulse border-2 border-orange-500":
                   x === "medium" && y === "medium",
               })}
             >
@@ -70,7 +69,7 @@ const FeaturesPriority = () => {
             </div>
             <div
               className={classNames("priority-card  bg-rose-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+                "animate-pulse border-2 border-orange-500":
                   x === "high" && y === "medium",
               })}
             >
@@ -81,27 +80,27 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>Low</strong> Emergency
                 </p>
-                <p className="hidden sm:block">
+                <p>
                   Features are no impact on the company's short-term and
                   long-term earnings.
                 </p>
               </div>
             </div>
             <div
-              className={classNames("priority-card bg-green-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+              className={classNames("priority-card bg-gray-100", {
+                "animate-pulse border-2 border-orange-500":
                   x === "low" && y === "low",
               })}
             ></div>
             <div
               className={classNames("priority-card bg-indigo-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+                "animate-pulse border-2 border-orange-500":
                   x === "medium" && y === "low",
               })}
             ></div>
             <div
               className={classNames("priority-card bg-indigo-100", {
-                "shadow border-orange-500 border-2 animate-pulse":
+                "animate-pulse border-2 border-orange-500":
                   x === "high" && y === "low",
               })}
             ></div>
@@ -111,7 +110,7 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>Low</strong> Important
                 </p>
-                <p className="hidden sm:block">
+                <p>
                   Maybe some clients will be happy, but it is okay if they
                   aren't.
                 </p>
@@ -122,9 +121,7 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>Medium</strong> Important
                 </p>
-                <p className="hidden sm:block">
-                  Standard functionality in the industry.
-                </p>
+                <p>Standard functionality in the industry.</p>
               </div>
             </div>
             <div>
@@ -132,9 +129,7 @@ const FeaturesPriority = () => {
                 <p>
                   <strong>High</strong> Important
                 </p>
-                <p className="hidden sm:block">
-                  Provide users with more than 10 times the benefits.
-                </p>
+                <p>Provide users with more than 10 times the benefits.</p>
               </div>
             </div>
           </div>
@@ -151,7 +146,7 @@ const FeaturesPriority = () => {
                 id="emergency"
                 value={x}
                 onChange={(e) => setX(e.target.value)}
-                className="select select-bordered"
+                className="select select-bordered select-sm"
               >
                 <option value="high">high</option>
                 <option value="medium">medium</option>
@@ -168,7 +163,7 @@ const FeaturesPriority = () => {
                 id="scope"
                 value={y}
                 onChange={(e) => setY(e.target.value)}
-                className="select select-bordered"
+                className="select select-bordered select-sm"
               >
                 <option value="high">high</option>
                 <option value="medium">medium</option>

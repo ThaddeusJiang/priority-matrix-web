@@ -141,7 +141,7 @@ const BugsPriority = () => {
                 id="emergency"
                 value={x}
                 onChange={(e) => setX(e.target.value)}
-                className="select select-bordered"
+                className="select select-bordered select-sm"
               >
                 <option value="high">high</option>
                 <option value="medium">medium</option>
@@ -158,7 +158,7 @@ const BugsPriority = () => {
                 id="scope"
                 value={y}
                 onChange={(e) => setY(e.target.value)}
-                className="select select-bordered"
+                className="select select-bordered select-sm"
               >
                 <option value="high">high</option>
                 <option value="medium">medium</option>
